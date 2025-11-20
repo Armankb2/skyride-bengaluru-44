@@ -14,7 +14,157 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      bookings: {
+        Row: {
+          booking_id: string
+          cancelled_at: string | null
+          completed_at: string | null
+          created_at: string
+          destination_address: string
+          destination_latitude: number
+          destination_longitude: number
+          distance_km: number
+          estimated_fare: number
+          estimated_travel_minutes: number
+          final_fare: number | null
+          id: string
+          payment_status: string
+          pickup_address: string
+          pickup_latitude: number
+          pickup_longitude: number
+          pickup_time_end: string | null
+          pickup_time_start: string | null
+          status: string
+          tier_id: string
+          updated_at: string
+        }
+        Insert: {
+          booking_id: string
+          cancelled_at?: string | null
+          completed_at?: string | null
+          created_at?: string
+          destination_address: string
+          destination_latitude: number
+          destination_longitude: number
+          distance_km: number
+          estimated_fare: number
+          estimated_travel_minutes: number
+          final_fare?: number | null
+          id?: string
+          payment_status?: string
+          pickup_address: string
+          pickup_latitude: number
+          pickup_longitude: number
+          pickup_time_end?: string | null
+          pickup_time_start?: string | null
+          status?: string
+          tier_id: string
+          updated_at?: string
+        }
+        Update: {
+          booking_id?: string
+          cancelled_at?: string | null
+          completed_at?: string | null
+          created_at?: string
+          destination_address?: string
+          destination_latitude?: number
+          destination_longitude?: number
+          distance_km?: number
+          estimated_fare?: number
+          estimated_travel_minutes?: number
+          final_fare?: number | null
+          id?: string
+          payment_status?: string
+          pickup_address?: string
+          pickup_latitude?: number
+          pickup_longitude?: number
+          pickup_time_end?: string | null
+          pickup_time_start?: string | null
+          status?: string
+          tier_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "bookings_tier_id_fkey"
+            columns: ["tier_id"]
+            isOneToOne: false
+            referencedRelation: "taxi_tiers"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      feedback: {
+        Row: {
+          booking_id: string
+          comment: string | null
+          created_at: string
+          id: string
+          rating: number
+        }
+        Insert: {
+          booking_id: string
+          comment?: string | null
+          created_at?: string
+          id?: string
+          rating: number
+        }
+        Update: {
+          booking_id?: string
+          comment?: string | null
+          created_at?: string
+          id?: string
+          rating?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "feedback_booking_id_fkey"
+            columns: ["booking_id"]
+            isOneToOne: false
+            referencedRelation: "bookings"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      taxi_tiers: {
+        Row: {
+          base_fare: number
+          created_at: string
+          description: string
+          display_order: number
+          estimated_arrival_minutes: number
+          id: string
+          is_active: boolean
+          max_passengers: number
+          name: string
+          per_km_rate: number
+        }
+        Insert: {
+          base_fare: number
+          created_at?: string
+          description: string
+          display_order: number
+          estimated_arrival_minutes: number
+          id?: string
+          is_active?: boolean
+          max_passengers: number
+          name: string
+          per_km_rate: number
+        }
+        Update: {
+          base_fare?: number
+          created_at?: string
+          description?: string
+          display_order?: number
+          estimated_arrival_minutes?: number
+          id?: string
+          is_active?: boolean
+          max_passengers?: number
+          name?: string
+          per_km_rate?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
