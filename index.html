@@ -1,32 +1,37 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SkyRide - Flying Taxi Booking in Bengaluru | Fast Urban Air Travel</title>
-    <meta name="description" content="Book autonomous flying taxis in Bengaluru with SkyRide. Skip traffic, save time. Choose from Eco, Comfort, or Elite tiers. Fast, safe, and reliable urban air mobility." />
-    <meta name="author" content="SkyRide" />
-    <meta name="keywords" content="flying taxi, Bengaluru, air taxi, urban air mobility, autonomous taxi, SkyRide, flying car" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://skyride.app/" />
-    <meta property="og:title" content="SkyRide - Flying Taxi Booking in Bengaluru" />
-    <meta property="og:description" content="Skip Bengaluru traffic with autonomous flying taxis. Book your air taxi in minutes." />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Form - Mini App</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width:720px; margin:auto; }
+    input, textarea, select { width:100%; padding:8px; margin:6px 0; box-sizing:border-box; }
+    button { padding:10px 16px; }
+    pre { background:#f4f4f4; padding:10px; overflow:auto; white-space:pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>Contact Form</h1>
+  <form id="contactForm">
+    <input id="name" placeholder="Name" required>
+    <input id="email" placeholder="Email" type="email" required>
+    <input id="phone" placeholder="Phone">
+    <select id="group">
+      <option value="">-- Select group (optional) --</option>
+      <option value="family">Family</option>
+      <option value="friends">Friends</option>
+      <option value="work">Work</option>
+    </select>
+    <textarea id="message" placeholder="Message" rows="4" required></textarea>
+    <button type="submit">Submit</button>
+  </form>
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://skyride.app/" />
-    <meta name="twitter:title" content="SkyRide - Flying Taxi Booking in Bengaluru" />
-    <meta name="twitter:description" content="Skip Bengaluru traffic with autonomous flying taxis. Book your air taxi in minutes." />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    
-    <link rel="canonical" href="https://skyride.app/" />
-  </head>
+  <h2>Latest saved entry</h2>
+  <pre id="latest">No data yet</pre>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="./app.js"></script>
+</body>
 </html>
