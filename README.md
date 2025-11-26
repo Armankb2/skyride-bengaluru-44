@@ -1,6 +1,6 @@
 # Welcome to your Lovable project
 
-## Project Information
+## Webiste Information
 
 **Project URL**: https://lovable.dev/projects/fda7fd7e-ae1d-4562-9bd8-419f8b2e3f56
 
@@ -12,7 +12,7 @@ There are several ways of editing your application.
 
 Simply visit the [Lovable Project](https://lovable.dev/projects/fda7fd7e-ae1d-4562-9bd8-419f8b2e3f56) and start prompting.
 
-Changes made via Lovable will be committed automatically to this repo.
+Changes which are made via Lovable will be committed automatically to this repo.
 
 **Edit Locally Using Your IDE**
 
