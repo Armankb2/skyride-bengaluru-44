@@ -1,6 +1,6 @@
 # Welcome to your Lovable project
 
-## Project Information
+## Project Info:
 
 **Project URL**: https://lovable.dev/projects/fda7fd7e-ae1d-4562-9bd8-419f8b2e3f56
 
@@ -12,7 +12,7 @@ There are several ways of editing your application.
 
 Simply visit the [Lovable Project](https://lovable.dev/projects/fda7fd7e-ae1d-4562-9bd8-419f8b2e3f56) and start prompting.
 
-Changes made via Lovable will be committed automatically to this repo.
+Changes made via Lovable will be committed automatically to this repository.
 
 **Edit Locally Using Your IDE**
 
@@ -71,3 +71,4 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This line was added by Arman using terminal to create a PR.
